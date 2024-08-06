@@ -1,0 +1,87 @@
+# Fruit Classification User Manual
+
+# Introduction
+The Fruit Classification project is a machine learning application designed to classify different types of fruits using a trained model. This manual provides comprehensive instructions for setting up, running, and using the application, whether you are a developer, tester, or end-user.
+
+# System Requirements
+Operating System: Windows, macOS, or Linux
+Python Version: 3.6 or higher
+Docker: (Optional) If you prefer using a containerized environment
+
+# Installation and Setup
+Cloning the Repository
+To get started, you need to clone the repository from GitHub.
+
+bash
+Copy code
+git clone https://github.com/yourusername/fruit-classification.git
+cd fruit-classification
+
+# Setting Up the Environment
+Ensure you have Python installed. Set up a virtual environment and install the necessary dependencies.
+
+# Creating a Virtual Environment:
+
+bash
+Copy code
+python -m venv venv
+source venv/bin/activate   # On Windows use `venv\Scripts\activate`
+Installing Dependencies:
+
+bash
+Copy code
+pip install -r requirements.txt
+Docker Setup
+If you prefer to run the application in a Docker container, follow these steps:
+
+# Building the Docker Image:
+
+bash
+Copy code
+docker build -t fruit-classification .
+
+# Running the Docker Container:
+
+bash
+Copy code
+docker run -it --rm -p 80:80 fruit-classification
+Running the Application
+Running Locally
+
+# Activate your virtual environment and run the script:
+
+bash
+Copy code
+python fruit_classification.py
+Running with Docker
+Once the Docker container is up, it will automatically start the application. You can interact with it via the exposed port (default: 80).
+
+# Usage Guide
+The application classifies fruits based on images provided. Here’s how to use it:
+
+# Uploading an Image:
+
+Navigate to the appropriate section of the application interface.
+Use the upload button to select an image file of the fruit.
+
+# Getting Predictions:
+After uploading, the system will process the image and provide a classification label along with a confidence score.
+
+# Interpreting Results:
+The output will display the predicted fruit type and the confidence percentage.
+
+# Troubleshooting
+Issue: Application not starting:
+
+Solution: Ensure all dependencies are correctly installed and the Python version is compatible.
+Issue: Docker container fails to build:
+
+Solution: Check the Dockerfile and ensure all necessary files are present and correctly referenced.
+Issue: Incorrect predictions:
+
+Solution: Verify that the input image quality is adequate and the model has been correctly trained.
+Contributing
+We welcome contributions from the community. Please fork the repository and submit a pull request with your changes. Ensure your code follows the project’s coding standards and includes appropriate tests.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for more details.
