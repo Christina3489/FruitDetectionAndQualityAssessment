@@ -46,7 +46,7 @@ Training the Model:
 # Run the training script:
 bash
 Copy code
-python train.py
+python FruitClassification.py
 
 # Testing the Model:
 
